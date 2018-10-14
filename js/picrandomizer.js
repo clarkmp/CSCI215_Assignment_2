@@ -1,16 +1,19 @@
 
 
-var pictures = ["https://pixel.nymag.com/imgs/daily/vulture/2018/08/30/magazine/jonah-hill/7.w385.h578.2x.jpg",
-                "https://static.fashionbeans.com/wp-content/uploads/2018/08/jonah-hill-15.jpg",
-                "http://media.gq.com/photos/5859cee24afebb381143ac43/master/w_800/shopping-jonah-hill.jpg",
-                "https://www.usmagazine.com/wp-content/uploads/2017/11/jonah-hill-august-25.jpg",
-                "https://www.usmagazine.com/wp-content/uploads/jonah-hill-2-97689981-7db2-47cb-a6aa-9961b7c2b691.jpg"]
+var pictures = [ "imgs/birdman.jpg", "imgs/fitGod.jpg", "imgs/ForrestGump.jpg", "imgs/jonahHill.jpg", "imgs/savethebees.jpg"]
 console.log("put imgs in array");
 
 var randomNum = Math.floor(Math.random() * pictures.length);
 console.log("made random number:" + randomNum);
 
-document.body.style.backgroundImage = "url(" + pictures[randomNum] + ")";
+var divNode = document.getElementById("randPic");
+var imgNode;
+imgNode = document.createElement("img");
+var srcAttr;
+srcAttr = document.createAttribute("src");
+srcAttr.value = pictures[randomNum];
+imgNode.setAttributeNode(srcAttr);
+divNode.appendChild(imgNode);
 console.log("changed image");
 
 
