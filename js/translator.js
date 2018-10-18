@@ -11,7 +11,7 @@ function translateText(){
 
     for (var x = 0; x < inputAsWords.length; x++) {
         var word = inputAsWords[x];
-
+        console.log("translate letter");
         if (word === ".-") {
             output = output + "A";
         }
@@ -95,4 +95,5 @@ function translateText(){
         }
     }
     document.getElementById("output").innerHTML = output;
+    console.log("put output into div");
 }
