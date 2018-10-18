@@ -11,7 +11,7 @@ function translateText(){
 
     for (var x = 0; x < inputAsWords.length; x++) {
         var word = inputAsWords[x];
-        console.log("translate letter");
+        console.log("translate letter: " + word);
         if (word === ".-") {
             output = output + "A";
         }
